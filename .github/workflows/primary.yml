@@ -14,8 +14,8 @@ env:
 jobs:
   child-call:
     uses: msarahan/workflow-env-var-demo/.github/workflows/child.yml@main
-    with:
-      example: "${{ env.an_env_var }}"
+    # with:
+    #   example: "${{ env.an_env_var }}"
   jobby-mcjobface:
     runs-on: ubuntu-latest
     steps:
