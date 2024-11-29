@@ -12,8 +12,15 @@ env:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  child-call:
     uses: msarahan/workflow-env-var-demo/.github/workflows/child.yml@main
     with:
       example: ${{ env.an_env_var }}
+  jobby-mcjobface:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ env.an_env_var }}
+        shell: bash
+      - run: echo ${an_env_var}
+        shell: bash
+  
