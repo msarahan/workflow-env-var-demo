@@ -12,5 +12,5 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     uses: msarahan/workflow-env-var-demo/.github/workflows/child.yml@main
-        with:
-          example: "somevalue"
+    with:
+      example: "somevalue"
